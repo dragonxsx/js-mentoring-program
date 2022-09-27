@@ -2,7 +2,7 @@
 import { Transform } from "stream"
 
 const reverse = new Transform({
-    transform(chunk, endcoding, callback) {
+    transform(chunk, _endcoding, callback) {
         const reversedString = chunk.toString().split("").reverse().join("")
         callback(null, `${reversedString}\n`)
     }
