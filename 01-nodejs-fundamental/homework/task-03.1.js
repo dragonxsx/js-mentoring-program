@@ -1,7 +1,7 @@
 // SOLUTION #1
-// const stream = require("stream")
+// import { Transform } from "stream"
 
-// const reverse = new stream.Transform({
+// const reverse = new Transform({
 //     transform(chunk, _endcoding, callback) {
 //         const reversedString = chunk.toString().split("").reverse().join("")
 //         callback(null, `${reversedString}\n`)
@@ -11,7 +11,7 @@
 // process.stdin.pipe(reverse).pipe(process.stdout)
 
 // SOLUTION #2
-const readline = require("readline")
+import readline from "readline"
 
 const rl = readline.createInterface({
     input: process.stdin

@@ -3,15 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "task1": "nodemon task-01.js",
-    "task2": "nodemon task-02.js"
+    "task2": "nodemon task-02.js",
+    "task3.1": "nodemon --exec babel-node task-03.1.js",
+    "task3.2": "nodemon --exec babel-node task-03.2.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.1",
+    "@babel/node": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
     "nodemon": "^2.0.19"
   },
   "dependencies": {

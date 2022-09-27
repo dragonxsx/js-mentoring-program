@@ -1,7 +1,11 @@
-const path = require("path")
-const fs = require("fs")
-const csv = require("csvtojson")
-const { randomUUID } = require("crypto")
+import path from "path"
+import fs from "fs"
+import csv from "csvtojson"
+import { fileURLToPath } from 'url'
+import { randomUUID } from "crypto"
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 const filePath = path.join(__dirname, './csv', 'nodejs-hw1-ex1.csv')
 const readStream = fs.createReadStream(filePath)
